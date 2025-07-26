@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pops', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle, var(--primary-color-1), var(--primary-color-2));
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 84px 0px;
+}
+
+.page-title h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1rem;
+  color: var(--secondary-color);
+  
+}
+.page-title h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 3rem;
+  color: #ffffff;
+}
+
+.page-title p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #e2e8f0;
+  margin-top: 8px;
+  max-width: 65%;
+  text-align: center;
+}
+
+#main_container {
+  background-color: #f1effd;
+  border-radius: 32px 32px 0px 0px;
+  padding: 32px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  background-image: url('src/image/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#contacts_container {
+  width: 50%;
+}
+
+#contacts_container h3 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+#contacts_container h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #010002;
+  margin-top: 16px;
+}
+
+#contacts_container p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #010002;
+  width: 80%;
+}
+
+#contact_form_container {
+  width: 35%;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 32px 24px;
+  background-color: #f4f4fc;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+#contact_form_container h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #111;
+  text-align: center;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.input-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.input-group input,
+.input-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: horizontal;
+}
+
+#contact_form button {
+  background-color: #2bac0a;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+#contact_form button:hover {
+  background-color: #239507;
+}
+
+
+#cards_container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 24px 0px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 18px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+  max-width: 40px;
+  max-height: 40px;
+  border-radius: 100%;
+  font-size: 1.2rem;
+}
+
+.card-icon img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.card-infos p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1rem;
+  color: #010002;
+}
+
+.card-infos span {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+/* Contact card variants */
+.contact-card.phone .card-icon {
+  background-color: #faf5ed;
+  color: #cd9c4d;
+}
+
+.contact-card.location .card-icon {
+  background-color: #dbeafe;
+  color: #3b82f6;
+}
+
+.contact-card.email .card-icon {
+  background-color: #ede9fe;
+  color: #8b5cf6;
+}
+
+.contact-card.whatsapp .card-icon {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+/* Social media icons */
+#social_midia_icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+#social_midia_icons img {
+  width: 32px;
+  height: 32px;
+  margin: 0 8px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+#social_midia_icons img:hover {
+  transform: scale(1.1);
+}
+
+.icon-link {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.2rem;
+  border-radius: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.icon-link.instagram {
+  background-color: #030712;
+}
+
+.icon-link.instagram:hover {
+  background-color: #030712d0;
+}
+
+.icon-link.tiktok {
+  background-color: #3b5998;
+}
+
+.icon-link.tiktok:hover {
+  background-color: #3b5998d0;
+}
+
+.icon-link.x {
+  background-color: #dd2a7b;
+}
+
+.icon-link.x:hover {
+  background-color: #dd2a7bd0;
+}
+
+.icon-link.linkedin {
+  background-color: #0e76a8;
+}
+
+.icon-link.linkedin:hover {
+  background-color: #0e76a8d0;
+}
+
+.icon-link.facebook {
+  background-color: #2a6af5;
+}
+
+.icon-link.facebook:hover {
+  background-color: #2a6af5d0;
+}
+
+#contacts_form_container {
+  width: 50%;
+}
