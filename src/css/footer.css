@@ -1,38 +1,46 @@
+/* Estilos para o elemento footer */
 footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 32px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 8%;
+}
 
-  .footer-logo {
+/* Estilos para a imagem do logo dentro do footer */
+.footer-logo {
     width: 200px;
-    height: 100%;
-  }
+    height: auto; 
+}
 
-  #footer_link_content {
+/* Estilos para o container que agrupa as listas de links do footer */
+#footer_link_content {
     display: flex;
     gap: 48px;
+}
 
-    .footer-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      list-style: none;
+/* Estilos para cada lista de links (ul) no footer */
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
+    padding: 0; 
+    margin: 0;
+}
 
-      li {
-        .list-title {
-          color: var(--secondary-color);
-        }
-        .footer-link {
-          color: #ffffff;
-          text-decoration: none;
-          transition: color 0.3s ease;
+/* Estilos para o título de cada lista de links (h3) */
+.footer-list .list-title {
+    color: var(--secondary-color);
+}
 
-          &:hover {
-            color: var(--secondary-color);
-          }
-        }
-      }
-    }
-  }
+/* Estilos para os links dentro das listas do footer */
+.footer-list .footer-link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Estilos para os links quando o mouse passa por cima (hover) */
+.footer-list .footer-link:hover {
+    color: var(--secondary-color);
 }
