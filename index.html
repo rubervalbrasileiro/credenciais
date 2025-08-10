@@ -1,342 +1,314 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="src/css/import.css">
-  <title>Contatar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/import.css">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="icon" type="image/x-icon" href="src/img/icons/pilot_2297923.png">
+        <title>Contactar</title>
 </head>
 <body>
-  <header>
-    <nav id="navbar">
-      <img 
-        src="src/img/logo-dark.png" 
-        alt="Logo"
-        class="logo"
-      >
-      <ul id="nav_list">
-          <li class="nav-item">
-            <a 
-              href="#" 
-              class="nav-link"
-              >
-                Inicio
-            </a>
-          </li>
-            <li>
-              <a 
-              href="#" 
-              class="nav-link active"
-              >
-              Projeto
-            </a>
-          </li>  
+    <!-- Início da seção de cabeçalho da página -->
+<header>  
+    <!-- Barra de navegação principal -->
+    <nav id="nav_bar"> 
+        
+        <!-- Logo da aplicação exibida na barra de navegação -->
+        <img 
+            src="src/img/logo-dark.png" 
+            alt="Logo"
+            class="logo"
+        >
+        
+        <!-- Observação: em HTML os atributos 'id' usam underline (_) e 'class' usam hífen (-) por convenção -->
+        <ul id="nav_list">
+            
+            <!-- Item de menu: Início -->
+            <li class="nav-item">
+                <a 
+                    href="index.html" 
+                    class="nav-link">
+                    Inicio
+                </a>
+            </li>
 
-          <li>
-            <a 
-          href="#" 
-          class="nav-link acitve"
-          >
-            Contatos
-          </a>
-        </li>
-        
-        <li>
-            <a 
-          href="#" 
-          class="nav-link acitve"
-          >
-            Sobre
-          </a>
-        
-            <a 
-          href="#" 
-          class="nav-link acitve"
-          >
-          </a>
-        
-      </ul>
+            <!-- Recomendado: envolver esse <a> com <li> -->
+            <li class="nav-item">
+                <a 
+                    href="certificacoes.html" 
+                    class="nav-link">
+                    Certificações
+                </a>
+            </li>
 
-      <a href="#" class="login-link">
-        Contatar
-      </a>
+            <!-- Item de menu: Sobre -->
+            <li class="nav-item">
+                <a 
+                    href="experiencias.html"
+                    class="nav-link active">
+                    Experiências
+                </a>
+            </li>
+
+            <!-- Espaços reservados vazios para futuros itens -->
+            <li class="nav-item">
+                <a 
+                href="sobre.html" class="nav-link">
+                Sobre
+                </a>
+            </li>
+            
+        </ul>
+
+        <a href="#" class="login-link">
+          <!--  espaço reservado para implementação futura-->
+        </a>
     </nav>
-  </header>
-  <section class="page-title">
+    <!-- Fim da seção de cabeçalho -->
+</header>
+
+<section class="page-title">
     <h2>
-      Seja bem vindo!
+        Seja bem-vindo
     </h2>
-    <H1>
-      A nossa central de relacionamento
-    </H1>
+
+    <h1>
+        Nossos contatos
+    </h1>
+
     <p>
-      Nossa central é o canal direto rápido onde você escolhe a forma mais conviniente para faze-lo.<br>
-      Para nos conhecer melhor, tirar dúvidas e muito mas. 
+        Tem um projeto em mente ou precisa de uma solução sob medida? Para se comunicar melhor com seus clientes e fornecedores, temos a solução para ajudar você a dar o próximo passo com criatividade, rapidez e foco nos resultados. Vamos transformar suas ideias em inovações reais. Conte conosco para transformar desafios em soluções práticas e lucrativas.
     </p>
-  </section>
-  <main id="main_container">
-    <section id="contacts_container">
-      <h3>
-        Entre em contatos
-      </h3>
-      <p>
-        Preencha o formulário ao lado e entraremos em contato com você o mais rápido possível.
-      </p>
+</section>
 
-      <div id="cards_container">
-        <a 
-        href="https://api.whatsapp.com/send?phone=5581985251699"
-        target=" _blank "
-        class="contact-card whatsapp"
-        >
-        <div class="card-icon">
-          <img src="src/img/icons/whatsapp_15015928.png" alt="Whatsapp">
-        </div>
-        <div class="card-infos">
-          <p>
-            Whatsapp
-          </p>
-          <span>
-           Fale conosco
-          </span>
-        </div>
-        </a>
-        
-        <a 
-        href="tel:+558132413318"
-        target=" _blank "
-        class="contact-card phone"
-        >
-        <div class="card-icon">
-          <img src="src/img/icons/call_1062678.png" alt="Call">
-        </div>
-        <div class="card-infos">
-          <p>
-            Telefone
-          </p>
-          <span>
-            (81) 3241-3318
-          </span>
-        </div>
-        </a>
+<!-- Conteúdo principal da página -->
+<main id="main_container">
+    <!-- Seção de contatos (lado esquerdo da página) -->
+    <section id="contacts_container">  
+         <!-- Título da seção -->
+        <h3>
+            Entre em contato
+        </h3>
+        <!-- Texto explicativo para orientar o usuário -->
+            <p>Preencha o formulário ao lado e entraremos em contato com você o mais rápido possível.
+            </p>
+        <!-- Container para os cartões de contato (telefone, email, etc.) -->
+            <div id="cards_container">
+                <!-- Cartão de contato para WhatsApp/telefone -->
+                <a 
+                href="http://api.whatsapp.com/send?phone=5581985251699"
+                target="_blank"
+                class="contact-card whatsapp"
+                >
+                 <!-- Ícone do WhatsApp -->
+                <div class="card-icon">
+                <img src="src/img/icons/whatsapp_15015928.png" alt="Whatsapp" height="32px">    
+                </div>
+                <!-- Informações do cartão de contato -->
+                <div class="card-infos">
+                    <p>
+                        Whatsapp <!-- Título do tipo de contato -->
+                    </p>
+                    <span>
+                        Fale conosco <!-- Texto exibido ao usuário -->
+                    </span>
+                </div>
+            </a>
 
-        <a 
-        href="https://maps.app.goo.gl/9WP69WJifFbNgEjU8"
-        target=" _blank "
-        class="contact-card location"
-        >
-        <div class="card-icon">
-          <img src="src/img/icons/map_5113933.png" alt="Localização">
-        </div>
-        <div class="card-infos">
-          <p>
-            Nossa Localização
-          </p>
-          <span>
-            Rua exemplo, 123 - Bairro exemplo - cidade exemplo - UF XX - CEP: 53-000-000
-          </span>
-        </div>
-        </a>
+            <a 
+                href="https://maps.app.goo.gl/GmNXZC8R8YrzoVMT9"
+                target="_blank"
+                class="contact-card location"
+                >
+                <div class="card-icon">
+                <img src="src/img/icons/map_5113933.png" alt="Whatsapp" height="32px">    
+                </div>
+                <div class="card-infos">
+                    <p>
+                        Localização
+                    </p>
+                    <span>
+                        Olinda - PE - Brasil - CEP: 53.000-000
+                    </span>
+                </div>
+            </a>
 
-        <a 
-        href="mailto:aquitebrasileiro@gmail.com"
-        target=" _blank "
-        class="contact-card email"
-        >
-        <div class="card-icon">
-          <img src="src/img/icons/exchange-mails_10506086.png" alt="Email">
-        </div>
-        <div class="card-infos">
-          <p>
-            Email 
-          </p>
-          <span>
-            Envie um email
-          </span>
-        </div>
-        </a>
-      </div>
+            <a 
+                href="mailto:aquitembrasileiro@gmail.com"
+                target="_blank"
+                class="contact-card email"
+                >
+                
+                <div class="card-icon">
+                <img src="src/img/icons/exchange-mails_10506086.png" alt="Email" height="32px"
+                >
+                </div>
+                <div class="card-infos">
+                    <p>
+                        Email
+                    </p>
+                    <span>
+                        Envie um email
+                    </span>
+                </div>
+            </a>
+            </div>
 
-      <h4>
-        Nos siga nas redes sociais
-      </h4>
+            <h4>
+                Nos siga nas redes sociais
+            </h4>
 
-      <div id="social_midia_icons">
-        
-        <a href="https://www.instagram.com/"
-        class="instagram">
-        <img src="src/img/icons/social_15707749.png" alt="instagram">
-        </a>
+            <div id="social_midia_icons">
 
-        <a href="https://www.tiktok.com/login"
-        class="tiktok">
-        <img src="src/img/icons/tik-tok_3046126.png" alt="tiktok">
-        </a>
-
-        <a href="https://x.com/"
-        class="x">
-        <img src="src/img/icons/letter-x_12452342.png" alt="X">
-        </a>
-
-        <a href="https://www.linkedin.com/"
-        class="likedin">
-        <img src="src/img/icons/linkedin_1377213.png" alt="likedin">
-        </a>
-
-        <a href="https://www.facebook.com/?locale=pt_BR"
-        class="facebook">
-        <img src="src/img/icons/facebook_3536394.png" alt="facebook">
-        </a>
-        
-        </div>
-
+                <a href="https://www.instagram.com/"
+                class="instagram">
+                <img src="src/img/icons/social_15707749.png" alt="instagram">
+            </a>
+                <a href="https://www.tiktok.com/"
+                class="tiktok">
+                <img src="src/img/icons/tik-tok_3046126.png" alt="tik-tok">
+            </a>
+            </a>
+                <a href="https://x.com/"
+                class="x">
+                <img src="src/img/icons/letter-x_12452342.png" alt="X">
+            </a>
+            </a>
+                <a href="https://www.linkedin.com/"
+                class="linkedin">
+                <img src="src/img/icons/linkedin_1377213.png" alt="Linkedin">
+            </a>
+            </a>
+                <a href="https://github.com/rubervalbrasileiro"
+                class="github">
+                <img src="src/img/icons/icons8-github-64.png" alt="github">
+            </a>
+                
+            </div>
     </section>
-
     <section id="contact_form_container">
-      <h3>
-        Contatar
-      </h3>
-      <form method="post" id="contact_form">
-        <div class="input-group">
-          <label for="name">
-            Nome
-          </label>
-          <input type="text"
-          id="name"
-          name="name"
-          required
-          >
-        </div>
+        <h3>
+            
+        </h3>
+        <form method="post" id="contact_form">
+            <div class="input-group">
+                <label for="name">
+                    Nome
+                </label>
+                <input type="text"
+                id="name"
+                name="name"
+                required
+                > <!-- required Não deixa enviar enquanto não for preenchido -->
+            </div>
 
-         <div class="input-group">
-          <label for="email">
-            Email
-          </label>
-          <input type="text"
-          id="email"
-          name="email"
-          required
-          >
-        </div>
+             <div class="input-group">
+                <label for="email">
+                    E-mail
+                </label>
+                <input type="email" 
+                id="email"
+                name="email"
+                required
+                > <!-- required Não deixa enviar enquanto não for preenchido -->
+            </div>
 
-        <div class="input-group">
-          <label for="subject">
-            Assunto 
-          </label>
-          <input type="text"
-          id="subject"
-          name="subject"
-          required
-          >
-        </div>
+             <div class="input-group">
+                <label for="subject">
+                    Assunto
+                </label>
+                <input type="text"
+                id="subject"
+                name="subject"
+                required 
+                > <!-- required Não deixa enviar enquanto não for preenchido -->
+            </div>
 
-          <div class="input-group">
-          <label for="message">
-            Mensagem
-          </label>
-            <textarea 
-              name="message" 
-              id="message"
-              required
-              rows="5"
-              ></textarea>         
-        </div>
-
-        <button type="button" onclick="enviarMensagem()" style="
-        background-color: #2bac0a;
-        color: white;
-        padding: 12px;
-        border: none;
-        border-radius: 8px;
-        font-weight: bold;
-        cursor: pointer;
-        width: 100%;"
-        >
-          Enviar Mensagem
-        </button>
-
-      </form>
+             <div class="input-group">
+                <label for="message">
+                    Mensagem
+                </label>
+                <textarea 
+                name="message" 
+                id="message"
+                required
+                
+                rows="5"></textarea> 
+            </div>
+            <button type="submit" class="send-button" id="submit_button">
+                Enviar mensagem
+            </button>
+        </form>
 
     </section>
-
-  </main>
+</main>
 
 <footer>
-  <img 
-    src="src/img/logo-light.png" 
-    alt="Logo"
+    <img 
+    src="src/img/logo-light.png"
+    alt="logo"
     class="footer-logo"
     >
-
     <div id="footer_link_content">
-      <ul class="footer-list">
-        <li>
-          <h3 class="list-title">
-            Blog
-          </h3>
-        </li>
-        <li>
-          <a href="#" class="footer-link">
-            Tecnologia
-          </a>
-        </li>
-        <li>
-          <a href="#" class="footer-link">
-            Programação
-          </a>
-        </li>
-        <li>
-          <a href="#" class="footer-link">
-            Design
-          </a>
-        </li>
-      </ul>
+        <ul class="footer-list">
+            <li>
+                <h3 class="list-title">
+                    Blog
+                </h3>             
+            </li>
+            <li>
+                <a href="#" 
+                class="footer-link">
+                Tecnologia
+                </a>
+            </li>
+            <li>
+                <a href="#" 
+                class="footer-link">
+                Programação
+                </a>
+            </li>
+            <li>
+                <a href="#" 
+                class="footer-link">
+                Design
+                </a>
+            </li>
+            
+        </ul>
 
-            <ul class="footer-list">
-        <li>
-          <h3 class="list-title">
-            Produtos
-          </h3>
-        </li>
-        <li>
-          <a href="#" class="footer-link">
-            App
-          </a>
-        </li>
-        <li>
-          <a href="#" class="footer-link">
-            Desktop
-          </a>
-        </li>
-        <li>
-          <a href="#" class="footer-link">
-            Cloud
-          </a>
-        </li>
-      </ul>
+        <ul class="footer-list">
+            <li>
+                <h3 class="list-title">
+                    Habilidade
+                </h3>             
+            </li>
+            <li>
+                <a href="#" 
+                class="footer-link">
+                Habilidades
+                </a>
+            </li>
+            <li>
+                <a href="#" 
+                class="footer-link">
+                Ferramentas
+                </a>
+            </li>
+            <li>
+                <a href="#" 
+                class="footer-link">
+                App
+                </a>
+            </li>
+            
+        </ul>
     </div>
 </footer>
-<script>
-function enviarMensagem() {
-  const nome = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const assunto = document.getElementById("subject").value;
-  const mensagem = document.getElementById("message").value;
-
-  const textoWhatsapp = `*Novo Contato*\n👤 Nome: ${nome}\n📧 Email: ${email}\n📌 Assunto: ${assunto}\n📝 Mensagem: ${mensagem}`;
-  const numeroWhatsapp = "5581985251699";
-  window.open(`https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(textoWhatsapp)}`, "_blank");
-
-  setTimeout(() => {
-    const destinatario = "aquitembrasileiro@gmail.com";
-    const urlEmail = `mailto:${destinatario}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(mensagem)}`;
-    window.location.href = urlEmail;
-  }, 1500);
-  return true;
-}
-</script>
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="src/js/email_watsapp.js"></script>
 </body>
-
 </html>
