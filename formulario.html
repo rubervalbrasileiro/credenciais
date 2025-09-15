@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário para Novo Projeto de Site</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #374151;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8 min-h-screen flex items-center justify-center">
+    <div class="max-w-3xl w-full mx-auto bg-white rounded-2xl shadow-xl p-6 md:p-10">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-2">
+                Vamos Construir Seu Site
+            </h1>
+            <p class="text-lg text-gray-600">
+                Preencha o formulário abaixo para nos ajudar a entender suas necessidades e criar a melhor solução para você.
+            </p>
+        </header>
+        <form id="projectForm" class="space-y-6">
+            <!-- Informações Pessoais e do Negócio -->
+            <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                <h2 class="text-xl font-bold text-gray-700 mb-4">Informações de Contato e Empresa</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="nome" class="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div>
+                        <label for="razaoSocial" class="block text-sm font-medium text-gray-700 mb-1">Razão Social (se aplicável)</label>
+                        <input type="text" id="razaoSocial" name="razaoSocial" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div>
+                        <label for="nomeFantasia" class="block text-sm font-medium text-gray-700 mb-1">Nome Fantasia (se aplicável)</label>
+                        <input type="text" id="nomeFantasia" name="nomeFantasia" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div>
+                        <label for="whatsapp" class="block text-sm font-medium text-gray-700 mb-1">WhatsApp</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div>
+                        <label for="socialMedia" class="block text-sm font-medium text-gray-700 mb-1">Qual a principal rede social do seu negócio?</label>
+                        <input type="text" id="socialMedia" name="socialMedia" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Tipo de Empresa</label>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center">
+                            <input type="radio" id="pessoaFisica" name="tipoEmpresa" value="Pessoa Física" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+                            <label for="pessoaFisica" class="ml-2 text-gray-700">Pessoa Física</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" id="mei" name="tipoEmpresa" value="MEI" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+                            <label for="mei" class="ml-2 text-gray-700">MEI</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" id="me" name="tipoEmpresa" value="ME" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+                            <label for="me" class="ml-2 text-gray-700">ME</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" id="ltda" name="tipoEmpresa" value="Ltda" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+                            <label for="ltda" class="ml-2 text-gray-700">Ltda</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" id="outrosTipo" name="tipoEmpresa" value="Outros" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+                            <label for="outrosTipo" class="ml-2 text-gray-700">Outros</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Tem funcionários?</label>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center">
+                            <input type="radio" id="temFuncionarioSim" name="temFuncionario" value="Sim" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+                            <label for="temFuncionarioSim" class="ml-2 text-gray-700">Sim</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" id="temFuncionarioNao" name="temFuncionario" value="Não" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300" checked>
+                            <label for="temFuncionarioNao" class="ml-2 text-gray-700">Não</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="quantosFuncionarios" class="mt-6 hidden">
+                    <label for="quantos" class="block text-sm font-medium text-gray-700 mb-1">Quantos?</label>
+                    <input type="number" id="quantos" name="quantos" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                </div>
+            </div>
+
+            <!-- Ramo de Atividade e Experiência -->
+            <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                <h2 class="text-xl font-bold text-gray-700 mb-4">Ramo de Atividade e Experiência</h2>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Qual seu ramo de atuação?</label>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center">
+                            <input type="radio" id="comercio" name="ramo" value="Comércio" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+                            <label for="comercio" class="ml-2 text-gray-700">Comércio</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" id="servico" name="ramo" value="Prestador de Serviço" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+                            <label for="servico" class="ml-2 text-gray-700">Prestador de Serviço</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" id="liberal" name="ramo" value="Profissional Liberal" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300">
+                            <label for="liberal" class="ml-2 text-gray-700">Profissional Liberal</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="listaProfissoes" class="mt-6 hidden">
+                    <label for="profissao" class="block text-sm font-medium text-gray-700 mb-1">Selecione sua profissão:</label>
+                    <select id="profissao" name="profissao" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <option value="Outros não relacionados">🧰 Outros não relacionados</option>
+                        <option value="Advogado">🧑‍⚖️ Advogado</option>
+                        <option value="Arquiteto">🏛️ Arquiteto</option>
+                        <option value="Artista Plástico">🎨 Artista Plástico</option>
+                        <option value="Auditor Independente">📋 Auditor Independente</option>
+                        <option value="Babá - bebê e crianças">👶 Babá - bebê e crianças</option>
+                        <option value="Cabeleireira / Cabeleireiro">💇‍♀️ Cabeleireira / Cabeleireiro</option>
+                        <option value="Cantor / Cantora">🎤 Cantor / Cantora</option>
+                        <option value="Cicloentregador / Cicloentregadora">🚲 Cicloentregador / Cicloentregadora</option>
+                        <option value="Coach de vida ou carreira">🧭 Coach de vida ou carreira</option>
+                        <option value="Confeiteiro / Confeiteira">🍰 Confeiteiro / Confeiteira</option>
+                        <option value="Consultor de Feng Shui">🧘‍♂️ Consultor de Feng Shui</option>
+                        <option value="Contador">📊 Contador</option>
+                        <option value="Corretor de imóveis">🏘️ Corretor de imóveis</option>
+                        <option value="Criador de conteúdo independente">🎥 Criador de conteúdo independente</option>
+                        <option value="Cuidador de idosos">🧓 Cuidador de idosos</option>
+                        <option value="Dentista">😁 Dentista</option>
+                        <option value="Designer de tatuagem">🎨 Designer de tatuagem</option>
+                        <option value="Designer gráfico">🎨 Designer gráfico</option>
+                        <option value="Economista">📈 Economista</option>
+                        <option value="Eletricista">🔧 Eletricista</option>
+                        <option value="Encanador">🚰 Encanador</option>
+                        <option value="Engenheiro">🏗️ Engenheiro</option>
+                        <option value="Entregador / Entregadora">📦 Entregador / Entregadora</option>
+                        <option value="Entregador parceiro">🤝 Entregador parceiro</option>
+                        <option value="Especialista em marketing de afiliados">📈 Especialista em marketing de afiliados</option>
+                        <option value="Farmacêutico / Farmacêutica">🧪 Farmacêutico / Farmacêutica</option>
+                        <option value="Fisioterapeuta">🧘 Fisioterapeuta</option>
+                        <option value="Fotógrafo profissional">📸 Fotógrafo profissional</option>
+                        <option value="Gastrólogo / Gastróloga">🍳 Gastrólogo / Gastróloga</option>
+                        <option value="Influenciador digital">📱 Influenciador digital</option>
+                        <option value="Jornalista">📰 Jornalista</option>
+                        <option value="Lanterneiro">🚗 Lanterneiro</option>
+                        <option value="Manicure / Pedicure">💅 Manicure / Pedicure</option>
+                        <option value="Mecânico">🔩 Mecânico</option>
+                        <option value="Médico">🩺 Médico</option>
+                        <option value="Motorista de aplicativo">🚘 Motorista de aplicativo</option>
+                        <option value="Motorista de entrega">🚚 Motorista de entrega</option>
+                        <option value="Motoboy / Motogirl">🛵 Motoboy / Motogirl</option>
+                        <option value="Músico profissional">🎶 Músico profissional</option>
+                        <option value="Nutricionista">🥗 Nutricionista</option>
+                        <option value="Pedreiro">🧱 Pedreiro</option>
+                        <option value="Pintor">🎨 Pintor</option>
+                        <option value="Podóloga / Podólogo">🦶 Podóloga / Podólogo</option>
+                        <option value="Professor de reforço escolar">👨‍🏫 Professor de reforço escolar</option>
+                        <option value="Psicólogo">🧠 Psicólogo</option>
+                        <option value="Publicitário">📢 Publicitário</option>
+                        <option value="Quiropraxista">💆 Quiropraxista</option>
+                        <option value="Redator freelancer">✍️ Redator freelancer</option>
+                        <option value="Técnico(a) em informática">🧑‍💻 Técnico(a) em informática</option>
+                        <option value="Técnico(a) em refrigeração e máquinas de lavar">❄️ Técnico(a) em refrigeração e máquinas de lavar</option>
+                        <option value="Terapeuta holístico">🌿 Terapeuta holístico</option>
+                        <option value="Terapeuta ocupacional">🧩 Terapeuta ocupacional</option>
+                        <option value="Tradutor / Intérprete">🌍 Tradutor / Intérprete</option>
+                        <option value="Transporte escolar">🚌 Transporte escolar</option>
+                        <option value="Veterinário">🐾 Veterinário</option>
+                        <option value="Web designer">💻 Web designer</option>
+                    </select>
+                </div>
+                <div class="mt-6">
+                    <label for="areaAtuacao" class="block text-sm font-medium text-gray-700 mb-1">Qual é a sua área de atuação?</label>
+                    <input type="text" id="areaAtuacao" name="areaAtuacao" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                </div>
+                <div class="mt-6">
+                    <label for="tempoRamo" class="block text-sm font-medium text-gray-700 mb-1">Há quanto tempo está no ramo?</label>
+                    <input type="text" id="tempoRamo" name="tempoRamo" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                </div>
+            </div>
+
+            <!-- Requisitos do Site -->
+            <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                <h2 class="text-xl font-bold text-gray-700 mb-4">Requisitos e Gosto para o Site</h2>
+                <div>
+                    <label for="tipoSite" class="block text-sm font-medium text-gray-700 mb-1">Que tipo de site você precisa?</label>
+                    <select id="tipoSite" name="tipoSite" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <option value="">Selecione...</option>
+                        <option value="Institucional">Institucional (para apresentar a empresa)</option>
+                        <option value="Portifolio">Portfólio (para mostrar trabalhos)</option>
+                        <option value="Landing Page">Landing Page (uma página para divulgar um produto/serviço)</option>
+                        <option value="E-commerce">Loja Virtual (e-commerce)</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+                <div class="mt-6">
+                    <label for="descritivo" class="block text-sm font-medium text-gray-700 mb-1">Descreva brevemente como você gostaria que o site fosse.</label>
+                    <textarea id="descritivo" name="descritivo" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                </div>
+                <div class="mt-6">
+                    <label for="sitesReferencia" class="block text-sm font-medium text-gray-700 mb-1">Você tem algum site de referência que goste do design ou funcionalidade? (Opcional)</label>
+                    <input type="text" id="sitesReferencia" name="sitesReferencia" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <p class="text-xs text-gray-500 mt-1">Ex: www.exemplo.com.br, www.outrosite.com.br</p>
+                </div>
+                <div class="mt-6">
+                    <label for="cores" class="block text-sm font-medium text-gray-700 mb-1">Quais cores ou estilo de design você prefere?</label>
+                    <input type="text" id="cores" name="cores" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <p class="text-xs text-gray-500 mt-1">Ex: Azul e cinza, cores mais claras e minimalistas.</p>
+                </div>
+            </div>
+
+            <!-- Botão de Envio -->
+            <div class="pt-6">
+                <button type="submit" class="w-full bg-indigo-600 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-indigo-700 transition-colors transform hover:scale-105">
+                    Enviar Questionário
+                </button>
+            </div>
+        </form>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const form = document.getElementById('projectForm');
+                const temFuncionarioSim = document.getElementById('temFuncionarioSim');
+                const temFuncionarioNao = document.getElementById('temFuncionarioNao');
+                const quantosFuncionariosDiv = document.getElementById('quantosFuncionarios');
+
+                const liberalRadio = document.getElementById('liberal');
+                const listaProfissoesDiv = document.getElementById('listaProfissoes');
+
+                // Lógica para mostrar/esconder o campo de funcionários
+                temFuncionarioSim.addEventListener('change', () => {
+                    quantosFuncionariosDiv.classList.remove('hidden');
+                });
+                temFuncionarioNao.addEventListener('change', () => {
+                    quantosFuncionariosDiv.classList.add('hidden');
+                });
+
+                // Lógica para mostrar/esconder a lista de profissões
+                liberalRadio.addEventListener('change', () => {
+                    if (liberalRadio.checked) {
+                        listaProfissoesDiv.classList.remove('hidden');
+                    }
+                });
+                const outrosRamoRadios = document.querySelectorAll('input[name="ramo"]:not(#liberal)');
+                outrosRamoRadios.forEach(radio => {
+                    radio.addEventListener('change', () => {
+                        if (!liberalRadio.checked) {
+                            listaProfissoesDiv.classList.add('hidden');
+                        }
+                    });
+                });
+
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault();
+    
+                    const formData = new FormData(this);
+                    const data = {};
+                    formData.forEach((value, key) => {
+                        data[key] = value;
+                    });
+    
+                    // Você pode enviar os dados para um serviço de e-mail ou API aqui.
+                    // Por exemplo, usando fetch():
+                    /*
+                    fetch('sua-api-endpoint', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(data),
+                    })
+                    .then(response => response.json())
+                    .then(result => {
+                        console.log('Sucesso:', result);
+                        alert('Seu formulário foi enviado com sucesso!');
+                        this.reset();
+                    })
+                    .catch(error => {
+                        console.error('Erro:', error);
+                        alert('Ocorreu um erro ao enviar. Tente novamente.');
+                    });
+                    */
+    
+                    // Por enquanto, vamos apenas exibir os dados no console para demonstração
+                    console.log('Dados do Formulário:', data);
+                    
+                    // Exemplo de como usar uma modal simples para substituir alert()
+                    const modal = document.createElement('div');
+                    modal.classList.add('fixed', 'inset-0', 'bg-gray-900', 'bg-opacity-50', 'flex', 'items-center', 'justify-center', 'p-4');
+                    modal.innerHTML = `
+                        <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full text-center">
+                            <h3 class="text-xl font-semibold mb-4">Formulário Enviado!</h3>
+                            <p class="text-gray-600 mb-6">Em breve entraremos em contato.</p>
+                            <button class="bg-indigo-600 text-white font-bold py-2 px-4 rounded-full hover:bg-indigo-700 transition-colors" onclick="document.body.removeChild(this.parentElement.parentElement)">
+                                OK
+                            </button>
+                        </div>
+                    `;
+                    document.body.appendChild(modal);
+    
+                    this.reset();
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>
